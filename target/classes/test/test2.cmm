@@ -1,0 +1,32 @@
+/** 
+ * 变量声明测试
+*/
+
+//int _a;         //下划线开头
+//real 3_a;	//数字开头
+//int a_;		//下划线结尾
+//int @a@com;	//非法字符
+
+int a[4] = {0,1};
+int k = a[1];
+int b =0;
+int d;
+bool m = (a[1]+k) >= (b+d);
+k = 2;
+
+for(int i=1;i<=5.0;i=i+1){
+    k = k+2;
+    if(i>3){
+    b = b-1;
+    }
+    else{
+    }
+}
+
+while(b<10){
+    int temp = 5
+    b = b+temp;
+}
+
+read(d);
+write(h);
