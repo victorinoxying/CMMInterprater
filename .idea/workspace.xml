@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ffa3840-2510-4492-80fd-249a2ccde1f5" name="Default Changelist" comment="" />
+    <list default="true" id="1ffa3840-2510-4492-80fd-249a2ccde1f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interpretor/CMMParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interpretor/CMMParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interpretor/CMMSemanticAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interpretor/CMMSemanticAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test/test2.cmm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/test2.cmm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/interpretor/CMMParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/interpretor/CMMParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/interpretor/CMMSemanticAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/interpretor/CMMSemanticAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/test2.cmm" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/test2.cmm" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,9 +39,9 @@
     <session id="-1733041222">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="35" />
+          <entry key="project.closed" value="37" />
           <entry key="project.open.time.10" value="6" />
-          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.11" value="5" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="2" />
@@ -45,34 +53,34 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="4" />
           <entry key="project.open.time.9" value="9" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
           <entry key="cmm" value="20" />
-          <entry key="java" value="82" />
+          <entry key="java" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="82" />
+          <entry key="JAVA" value="85" />
           <entry key="PLAIN_TEXT" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cmm" value="1102" />
+          <entry key="cmm" value="1205" />
           <entry key="ft" value="1" />
-          <entry key="java" value="39068" />
+          <entry key="java" value="39330" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="39068" />
-          <entry key="PLAIN_TEXT" value="1102" />
+          <entry key="JAVA" value="39330" />
+          <entry key="PLAIN_TEXT" value="1205" />
           <entry key="VTL" value="1" />
         </counts>
       </usages-collector>
@@ -87,39 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/test/test2.cmm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/interpretor/CMMSemanticAnalysis.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#PrintError#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#PrintSymbolTable#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#addError#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#addTypeError#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#statement#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#doID#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#array#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#doArrayIndex#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#expression#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#doExpression_cell#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#condition#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#condition_cell#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#declare_stm#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#assign_stm#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#for_stm#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#if_stm#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#while_stm#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#read_stm#0;class#CMMSemanticAnalysis#0" />
-                <element signature="method#write_stm#0;class#CMMSemanticAnalysis#0" />
-              </folding>
+            <state relative-caret-position="259">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -127,8 +104,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="266">
+              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,15 +139,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/interpretor/CMMSemanticAnalysis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="720" column="9" lean-forward="true" selection-start-line="720" selection-start-column="9" selection-end-line="720" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/interpretor/CMMParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8759">
-              <caret line="473" column="30" selection-start-line="473" selection-start-column="30" selection-end-line="473" selection-end-column="30" />
+            <state relative-caret-position="11191">
+              <caret line="601" column="42" selection-start-line="601" selection-start-column="42" selection-end-line="601" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1191#1192#0" expanded="true" />
                 <element signature="e#1218#1219#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tools/ConstVar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/interpretor/CMMLexer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1273">
+              <caret line="78" column="72" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -183,12 +193,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
-      <find>term</find>
-      <find>if(currentToken == null)</find>
-      <find>非法</find>
-      <find>非法标识符</find>
-      <find>.contains</find>
       <find>state</find>
       <find>new TreeNode(ConstVar</find>
       <find>currentToken.getRow()</find>
@@ -205,7 +209,6 @@
       <find>checkID</find>
       <find>forex</find>
       <find>express</find>
-      <find>array</find>
       <find>expression</find>
       <find>cell</find>
       <find>update</find>
@@ -213,7 +216,17 @@
       <find>未初始化</find>
       <find>for_stm</find>
       <find>for_staty</find>
+      <find>dec</find>
+      <find>ConstVar.BOOL</find>
+      <find>数组赋值表达式只能使用常量</find>
+      <find>在使用时未声明</find>
+      <find>array</find>
+      <find>在使用前未声明</find>
+      <find>doID</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -226,13 +239,13 @@
         <option value="$PROJECT_DIR$/src/main/java/interpretor/CMMLexer.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/SymbolElement.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/TreeNode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/interpretor/CMMParser.java" />
         <option value="$PROJECT_DIR$/src/main/resources/test/error1.cmm" />
         <option value="$PROJECT_DIR$/src/main/java/entity/SymbolTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/tools/ConstVar.java" />
         <option value="$PROJECT_DIR$/src/test/java/main.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/test/test2.cmm" />
+        <option value="$PROJECT_DIR$/src/main/java/interpretor/CMMParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/interpretor/CMMSemanticAnalysis.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/test/test2.cmm" />
       </list>
     </option>
   </component>
@@ -263,9 +276,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,6 +357,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -439,11 +452,13 @@
       <workItem from="1544630560878" duration="20291000" />
       <workItem from="1545057311236" duration="31000" />
       <workItem from="1545237103899" duration="46000" />
+      <workItem from="1545539624510" duration="3502000" />
+      <workItem from="1545543541350" duration="357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273400000" />
+    <option name="totallyTimeSpent" value="277259000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -457,7 +472,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20308311" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20844504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -466,15 +481,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27722773" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40311173" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31586403" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4022663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32390383" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32152975" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24896266" />
@@ -527,16 +542,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/interpretor/CMMParser.java</url>
-          <line>512</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/interpretor/CMMSemanticAnalysis.java</url>
-          <line>391</line>
+          <line>133</line>
           <properties />
-          <option name="timeStamp" value="49" />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -568,13 +577,7 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/CMMCompiler-master/CMMCompiler-master/CMMCompiler/src/compiler/CMMLexer.java" />
-    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/structure/TreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/structure/TreeNode.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/test/test3.cmm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -603,20 +606,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/structure/SymbolTableElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="103" lean-forward="true" selection-start-line="3" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/structure/SymbolTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/structure/SymbolTableElement.java" />
+    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/structure/SymbolTable.java" />
     <entry file="jar://D:/java/jdk/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -624,25 +615,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/compiler/CompilerFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19543" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/compiler/CMMLexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="521" column="25" selection-start-line="521" selection-start-column="25" selection-end-line="521" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/compiler/CMMParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1668">
-          <caret line="754" column="27" selection-start-line="754" selection-start-column="27" selection-end-line="754" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/compiler/CompilerFrame.java" />
+    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/compiler/CMMLexer.java" />
+    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/compiler/CMMParser.java" />
     <entry file="jar://D:/java/jdk/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -661,12 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1539">
           <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="27" />
-          <folding>
-            <element signature="e#1227#1228#0" expanded="true" />
-            <element signature="e#1274#1275#0" expanded="true" />
-            <element signature="e#2489#2490#0" expanded="true" />
-            <element signature="e#2523#2524#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -681,39 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#825#826#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#961#962#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1227#1228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tools/ConstVar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/interpretor/CMMLexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="119" column="56" selection-start-line="119" selection-start-column="56" selection-end-line="119" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -724,59 +660,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test/test2.cmm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/interpretor/CMMSemanticAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#PrintError#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#PrintSymbolTable#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#addError#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#addTypeError#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#statement#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#doID#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#array#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#doArrayIndex#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#expression#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#doExpression_cell#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#condition#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#condition_cell#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#declare_stm#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#assign_stm#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#for_stm#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#if_stm#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#while_stm#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#read_stm#0;class#CMMSemanticAnalysis#0" />
-            <element signature="method#write_stm#0;class#CMMSemanticAnalysis#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/compiler/CMMSemanticAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11837">
-          <caret line="786" column="25" selection-start-line="786" selection-start-column="20" selection-end-line="786" selection-end-column="25" />
-          <folding>
-            <element signature="method#forAssign#0;class#CMMSemanticAnalysis#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/CMMCompiler/CMMCompiler/src/compiler/CMMSemanticAnalysis.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/test/error1.cmm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -800,13 +684,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/interpretor/CMMParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8759">
-          <caret line="473" column="30" selection-start-line="473" selection-start-column="30" selection-end-line="473" selection-end-column="30" />
+        <state relative-caret-position="11191">
+          <caret line="601" column="42" selection-start-line="601" selection-start-column="42" selection-end-line="601" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1191#1192#0" expanded="true" />
             <element signature="e#1218#1219#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/ConstVar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interpretor/CMMLexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1273">
+          <caret line="78" column="72" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interpretor/CMMSemanticAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="720" column="9" lean-forward="true" selection-start-line="720" selection-start-column="9" selection-end-line="720" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/test2.cmm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>

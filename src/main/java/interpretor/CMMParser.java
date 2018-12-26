@@ -594,14 +594,15 @@ public class CMMParser {
         //[在调用的时候已经匹配过了
         nextToken();
         if(currentToken.getContent().equals(ConstVar.BRACKET_RIGHT)){
+            String error;
             if(isDeclare){
-                resultNode.setContent(ConstVar.EMPTY_STM);
+                error = "数组下标为空，是非法的数组声明";
             }
             else {
-                String error = "数组下标为空，无法找到正确元素";
-                addError(error);
-                resultNode = new TreeNode(error,ConstVar.TYPE_ERROR);
+                error = "数组下标为空，无法找到正确元素";
             }
+            addError(error);
+            resultNode = new TreeNode(error,ConstVar.TYPE_ERROR);
             nextToken();
             return resultNode;
         }
@@ -746,16 +747,25 @@ public class CMMParser {
         else if (currentToken!=null &&currentToken.getContent().equals(ConstVar.BRACE_LEFT)){
             nextToken();
             resultNode = new TreeNode(ConstVar.ARRAY_STATEMENT,ConstVar.TYPE_ARRAY,currentToken.getRow());
-            if (currentToken!=null &&(valueTypeSignalSet.contains(currentToken.getType())|| currentToken.getContent().equals(ConstVar.DOUBLE_QUOTATION))){
+            if (currentToken!=null &&(valueTypeSignalSet.contains(currentToken.getType())||currentToken.getContent().equals(ConstVar.FALSE)
+                    ||currentToken.getContent().equals(ConstVar.TRUE)|| currentToken.getContent().equals(ConstVar.DOUBLE_QUOTATION))){
                 //字符串数组第一个值
                 if(currentToken.getContent().equals(ConstVar.DOUBLE_QUOTATION)){
                     resultNode.add(doString());
                 }
                 //其余类型数组第一个值
                 else {
-                    TreeNode elementNode = new TreeNode(currentToken.getContent(),currentToken.getType(),currentToken.getRow());
+                    String type;
+                    if(currentToken.getContent().equals(ConstVar.TRUE)||currentToken.getContent().equals(ConstVar.FALSE)){
+                        type = ConstVar.TYPE_BOOL;
+                    }
+                    else {
+                        type = currentToken.getType();
+                    }
+                    TreeNode elementNode = new TreeNode(currentToken.getContent(),type,currentToken.getRow());
                     resultNode.add(elementNode);
                     nextToken();
+
                 }
             }
             else {
@@ -772,12 +782,20 @@ public class CMMParser {
             }
             while (currentToken!=null &&currentToken.getContent().equals(ConstVar.COMMA)){
                 nextToken();
-                if (currentToken!=null &&(valueTypeSignalSet.contains(currentToken.getType())|| currentToken.getContent().equals(ConstVar.DOUBLE_QUOTATION))){
+                if (currentToken!=null &&(valueTypeSignalSet.contains(currentToken.getType())||currentToken.getContent().equals(ConstVar.FALSE)
+                        ||currentToken.getContent().equals(ConstVar.TRUE)|| currentToken.getContent().equals(ConstVar.DOUBLE_QUOTATION))){
                     if(currentToken.getContent().equals(ConstVar.DOUBLE_QUOTATION)){
                         resultNode.add(doString());
                     }
                     else {
-                        TreeNode elementNode = new TreeNode(currentToken.getContent(),currentToken.getType(),currentToken.getRow());
+                        String type;
+                        if(currentToken.getContent().equals(ConstVar.TRUE)||currentToken.getContent().equals(ConstVar.FALSE)){
+                            type = ConstVar.TYPE_BOOL;
+                        }
+                        else {
+                            type = currentToken.getType();
+                        }
+                        TreeNode elementNode = new TreeNode(currentToken.getContent(),type,currentToken.getRow());
                         resultNode.add(elementNode);
                         nextToken();
                     }

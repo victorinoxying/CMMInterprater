@@ -592,80 +592,73 @@ public class CMMSemanticAnalysis {
                 SymbolElement element = new SymbolElement(idName,arrayType,idNode.getRowNum(),level);
                 TreeNode arrayStmNode = idNode.getChildAt(0);
                 int arraySize =0;
-                //动态数组
-                if(arrayStmNode.getContent().equals(ConstVar.EMPTY_STM)){
-                    element.setArrayElementsNum(ConstVar.MAXSIZE);
-                    table.add(element);
+                TreeNode sizeNode = arrayStmNode.getChildAt(0);
+                String sizeType = sizeNode.getType();
+                String sizeValue = sizeNode.getContent();
+                //声明处理
+                if(sizeType.equals(ConstVar.TYPE_INT)){
+                    int size = Integer.parseInt(sizeValue);
+                    if(size<=0){
+                        String error = "声明错误，声明数组长度必须大于0";
+                        addError(error,sizeNode.getRowNum());
+                        return;
+                    }
                 }
-                //定长数组
-                else if(arrayStmNode.getContent().equals(ConstVar.ARRAY_STATEMENT)&&arrayStmNode.getChildCount()>0){
-                    TreeNode sizeNode = arrayStmNode.getChildAt(0);
-                    String sizeType = sizeNode.getType();
-                    String sizeValue = sizeNode.getContent();
-                    if(sizeType.equals(ConstVar.TYPE_INT)){
-                        int size = Integer.parseInt(sizeValue);
-                        if(size<=0){
-                            String error = "声明错误，声明数组长度必须大于0";
+                else if(sizeType.equals(ConstVar.TYPE_STRING)||sizeType.equals(ConstVar.TYPE_REAL)||sizeType.equals(ConstVar.TYPE_BOOL)){
+                    String error = "类型错误，声明数组长度只能使用整型";
+                    addError(error,sizeNode.getRowNum());
+                    return;
+                }
+                else if(sizeType.equals(ConstVar.TYPE_ID)){
+                    SymbolElement checkedID = doID(sizeNode,false);
+                    if(checkedID!=null){
+                        if(checkedID.getType().equals(ConstVar.TYPE_INT)){
+                            int size = Integer.parseInt(checkedID.getValue());
+                            if(size<=0){
+                                String error = "声明错误，声明数组长度必须大于0";
+                                addError(error,sizeNode.getRowNum());
+                                return;
+                            }
+                            else {
+                                sizeValue = checkedID.getValue();
+                            }
+                        }
+                        else {
+                            String error = "类型错误，声明数组长度只能使用整型，变量 "+checkedID.getName()+" 是"+checkedID.getType()+"类型";
+                            addError(error,sizeNode.getRowNum());
+                            return;
+                        }
+                    }else {
+                        return;
+                    }
+                }
+                else if(calculateSignalSet.contains(sizeValue)){
+                    TreeNode result = expression(sizeNode);
+                    if(result!=null){
+                        if(result.getType().equals(ConstVar.TYPE_INT)){
+                            int size = Integer.parseInt(result.getContent());
+                            if(size<=0){
+                                String error = "声明错误，声明数组长度必须大于0";
+                                addError(error,sizeNode.getRowNum());
+                                return;
+                            }
+                            else {
+                                sizeValue = result.getContent();
+                            }
+                        }
+                        else {
+                            String error = "类型错误，声明数组长度只能使用整型，算数表达式值为"+ConstVar.TYPE_REAL+"类型";
                             addError(error,sizeNode.getRowNum());
                             return;
                         }
                     }
-                    else if(sizeType.equals(ConstVar.TYPE_STRING)||sizeType.equals(ConstVar.TYPE_REAL)||sizeType.equals(ConstVar.TYPE_BOOL)){
-                        String error = "类型错误，声明数组长度只能使用整型";
-                        addError(error,sizeNode.getRowNum());
+                    else {
                         return;
                     }
-                    else if(sizeType.equals(ConstVar.TYPE_ID)){
-                        SymbolElement checkedID = doID(sizeNode,false);
-                        if(checkedID!=null){
-                            if(checkedID.getType().equals(ConstVar.TYPE_INT)){
-                                int size = Integer.parseInt(checkedID.getValue());
-                                if(size<=0){
-                                    String error = "声明错误，声明数组长度必须大于0";
-                                    addError(error,sizeNode.getRowNum());
-                                    return;
-                                }
-                                else {
-                                    sizeValue = checkedID.getValue();
-                                }
-                            }
-                            else {
-                                String error = "类型错误，声明数组长度只能使用整型，变量 "+checkedID.getName()+" 是"+checkedID.getType()+"类型";
-                                addError(error,sizeNode.getRowNum());
-                                return;
-                            }
-                        }else {
-                            return;
-                        }
-                    }
-                    else if(calculateSignalSet.contains(sizeValue)){
-                        TreeNode result = expression(sizeNode);
-                        if(result!=null){
-                            if(result.getType().equals(ConstVar.TYPE_INT)){
-                                int size = Integer.parseInt(result.getContent());
-                                if(size<=0){
-                                    String error = "声明错误，声明数组长度必须大于0";
-                                    addError(error,sizeNode.getRowNum());
-                                    return;
-                                }
-                                else {
-                                    sizeValue = result.getContent();
-                                }
-                            }
-                            else {
-                                String error = "类型错误，声明数组长度只能使用整型，算数表达式值为"+ConstVar.TYPE_REAL+"类型";
-                                addError(error,sizeNode.getRowNum());
-                                return;
-                            }
-                        }
-                        else {
-                            return;
-                        }
-                    }
-                    arraySize =Integer.parseInt(sizeValue);
-                    element.setArrayElementsNum(arraySize);
-                    table.add(element);
                 }
+                arraySize =Integer.parseInt(sizeValue);
+                element.setArrayElementsNum(arraySize);
+                table.add(element);
                 //给数组赋值
                 if(node.getChildCount()>2&&node.getChildAt(2).getContent().equals(ConstVar.ASSIGN)){
                     TreeNode valuesNode = node.getChildAt(2).getChildAt(0);
@@ -713,9 +706,8 @@ public class CMMSemanticAnalysis {
         if(checkedId!=null){
             lName = checkedId.getName();
             lType = checkedId.getType();
-        }else {
-            String error = "变量 "+lName+" 在使用前未声明";
-            addError(error,lNode.getRowNum());
+        }
+        else {
             return;
         }
         String rType = rNode.getType();
@@ -734,8 +726,6 @@ public class CMMSemanticAnalysis {
                 rValueType = rCheckedID.getType();
             }
             else {
-                String error = "变量 "+rContent+" 在使用前未声明";
-                addError(error,lNode.getRowNum());
                 return;
             }
         }
